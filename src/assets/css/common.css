@@ -1,0 +1,33 @@
+:root {
+  /* 主题颜色 */
+  --primary-color: #ff9854;
+  /* 所有搜索框,有!important才会显示 */
+  --van-search-left-icon-color: var(--primary-color) !important;
+  /* 所有bottom下划线  */
+  --van-tabs-bottom-bar-color: var(--primary-color) !important;
+
+  --van-primary-color:var(--primary-color) !important;
+  --van-text-color:var(--primary-color) !important;
+
+  /* 渐变色 */
+  --theme-linear-gradient:linear-gradient(90deg,#fa8c1d,#fcaf3f);
+}
+
+body {
+  font-size: 14px;
+}
+
+/* 隐藏TabBar的类 */
+.top-page {
+  /* 占满整个屏幕 */
+  height: 100vh;
+  /* 有position，z-index才生效
+   这里如果是absolute则不生效,可能与TabBar组件相关样式有关 */
+  position: relative;
+  /* TabBar的z-index默认1 */
+  z-index: 9;
+  /* 背景色挡住TabBar */
+  background-color: #fff;
+  /* y轴方向溢出:滚动条 */
+  overflow-y: auto;
+}
