@@ -10,12 +10,16 @@
 
 <script setup>
 import { defineAsyncComponent } from "vue";
+import useHomeStore from "@/stores/modules/home";
+import { storeToRefs } from "pinia";
 const HomeNavBar = defineAsyncComponent(() =>
-  import("./cnps/home-nav-bar.vue")
+  import("./cpns/home-nav-bar.vue")
 );
 const HomeSearchBox = defineAsyncComponent(() =>
-  import("./cnps/home-search-box.vue")
+  import("./cpns/home-search-box.vue")
 );
+const homeStore = useHomeStore();
+homeStore.fetchHotSuggests();
 </script>
 
 <style scoped lang="less">
